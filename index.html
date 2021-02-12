@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,16 @@
     <title>Document</title>
 
     <!-- external stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 
     <!-- internal stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/container.css">
 </head>
-<body>
+
+<body class="dark-theme">
     <div class="modal hide">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.</p>
         <button>OK</button>
@@ -29,29 +33,54 @@
     <div class="container">
         <div class="page currency-page active">
             <h2>Currency 1</h1>
-            <hr>
-            <ul class="savedChoices">
-                <li>Lorem.</li>
-                <li>Lorem.</li>
-                <li>Lorem.</li>
-                <li>Lorem.</li>
-            </ul>
-            <ul class="previousUsed">
-                <li>Lorem.</li>
-                <li>Lorem.</li>
-            </ul>
-            <div class="custom">
-                <h3>Select</h3>
-            </div>
+                <hr>
+                <ul class="savedChoices">
+                    <li>Lorem.</li>
+                    <li>Lorem.</li>
+                    <li>Lorem.</li>
+                    <li>Lorem.</li>
+                </ul>
+                <ul class="previousUsed">
+                    <li>Lorem.</li>
+                    <li>Lorem.</li>
+                </ul>
+                <div class="custom">
+                    <button>Select Custom</button>
+                </div>
+                <section>
+                    <ul>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                </section>
         </div>
         <div class="page calc-page hide">
-            <label for="amount"></label>
-            <input type="text" name="amount">
-            <h3>1 INR = </h3>
-            <h2>72 USD</h2>
+            <label for="amount">
+                <h2>Amount</h2>
+            </label>
+            <hr>
+            <input type="number" name="amount">
+            <div class="display">
+                <h3>1 INR = </h3>
+                <h2>72 USD</h2>
+            </div>
             <button>Change Currency</button>
             <button>Swap</button>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
