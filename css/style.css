@@ -16,13 +16,14 @@ html
     --clr-secondary : #fff;
     --clr-btn : #fca311;
     --clr-text : #111;
-    
+    --shadow : 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .dark-theme
 {
     --clr-primary : #000000;
     --clr-secondary : #14213d;
     --clr-text : #eee;
+    --shadow : none;
 }
 
 
@@ -31,7 +32,8 @@ body
     width: 100vw;
     min-height: 100vh;
 
-
+    background: var(--clr-primary);
+    color: var(--clr-text);
 }
 
 header
@@ -39,24 +41,60 @@ header
     width: 100vw;
     height: fit-content;
 
-    padding: 2em 4em;
     display: flex;
+    align-items: center;
 
+    box-shadow: var(--shadow);
+
+    padding: 0.5em 4em;
 }
+
 i
 {
     font-size: 3em;
 }
+i:nth-child(1)
+{
+    color: var(--clr-btn);
+}
+
 h1
 {
-    max-width: 10ch;
     font-size: 1.5em;
+
+    max-width: 10ch;
+    margin-left: calc(0.5em + 0.1vw);
 }
-i + i
+
+i.fa-sun
 {
     margin-left: auto;
 }
 
+.container
+{
+    width: 50%;
+    max-width: 40em;
+
+    height: 80vh;
+    background: var(--clr-secondary);
+
+    position: relative;
+
+    margin: auto;
+}
+
+.page
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 1em;
+
+}
 
 .active
 {
@@ -69,4 +107,20 @@ i + i
     display: none;
     opacity: 0;
     pointer-events: none;
+}
+
+@media (max-width : 768px)
+{
+    header
+    {
+        padding: 0.5em 1em;
+    }
+    i
+    {
+        font-size: 2.6em;
+    }
+    h1
+    {
+        font-size: 1.3em;
+    }
 }
