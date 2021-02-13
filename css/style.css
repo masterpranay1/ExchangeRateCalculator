@@ -22,8 +22,8 @@ html
 }
 .dark-theme
 {
-    --clr-primary : #2e2e2e;
-    --clr-secondary : #161a1d;
+    --clr-primary : #1e222b;
+    --clr-secondary : #212835;
     --clr-text : #eee;
     --shadow : 0 2px 10px 0 rgba(153, 152, 152, 0);
 }

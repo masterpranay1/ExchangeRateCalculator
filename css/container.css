@@ -30,13 +30,21 @@
     box-shadow: var(--shadow);
     border-radius: 10px;
 
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
-h2
+h2, h3
 {
     font-size: 2em;
     text-align: center;
+
+    width: fit-content;
+    margin: 0  auto;
+}
+h3
+{
+    font-size: 1.2em;
+    margin-top: 0.2em;
 }
 
 hr
@@ -86,6 +94,12 @@ li, button
     border-radius: 8px;
 
     cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+li:hover , button:hover
+{
+    transform: scaleX(1.1);
 }
 
 .custom
@@ -98,8 +112,7 @@ li, button
     background : var(--clr-success);
     border-color: rgb(102, 151, 2);
 
-    width: 85%;
-    max-width: 20em;
+    
 }
 
 .page
@@ -124,6 +137,7 @@ input
     margin: 0 auto;
 
     font-size: 1.1em;
+    color: var(--clr-text);
 }
 .display
 {
@@ -142,21 +156,29 @@ section
     top: 5em;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -13%;
 
     background: var(--clr-primary);
 
     border-radius: 10px;
 
     transition: 1s;
-    transform: translateY(100%);
+    transform: translateY(100%) scaleY(0);
 
     border-radius: 20px 20px 0 0;
 
     overflow-y: scroll;
 
     border: 1px solid var(--clr-secondary);
+
+    z-index: 1111;
+
 }
+section ul
+{
+    list-style: none;
+}
+
 ::-webkit-scrollbar
 {
     display: none;
@@ -171,4 +193,9 @@ section
 {
     display: none;
     opacity: 0;
+}
+#checked
+{
+    background: chartreuse;
+    border-color: rgb(93, 185, 1);
 }
