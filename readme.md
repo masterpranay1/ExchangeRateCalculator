@@ -11,6 +11,6 @@
 * we can switch to <b> Dark Theme </b>
 * Made with vanilla Javascript
 
-[Click here for live running example](https://https://masterpranay1.github.io/ExchangeRateCalculator/ "Live Run")
+[Click here for live running example](https://masterpranay1.github.io/ExchangeRateCalculator/ "Live Run")
 
 #### Show your love by staring this repo ❤
