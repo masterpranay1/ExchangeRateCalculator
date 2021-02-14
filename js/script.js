@@ -12,6 +12,18 @@ let previousUsed = ["INR", "USD"];
 let currency1, currency2;
 let temp = 0;
 
+swal.fire({
+    title : "Designed By",
+    html : `<h3 style ="color:var(--clr-success); font-size:2em">masterpranay</h3>`,
+    timer : 2000
+})
+.then(() => {
+    swal.fire({
+        icon : 'success',
+        text : 'This project uses a api so please wait for few seconds to load 👍'
+    });
+});
+
 const setCurrency = rates => {
    for(var key in rates)
    {
@@ -36,7 +48,12 @@ function checkLi()
 fetch('https://open.exchangerate-api.com/v6/latest')
 .then(res => res.json())
 .then(data => setCurrency(data.rates))
-.catch(error => console.log(error))
+.catch(error => swal.fire({
+    icon : 'error',
+    title : 'Api limit reached',
+    text : 'this project uses a free whose number of uses limit is reached',
+    footer : 'so please try again later'
+}))
 .then(() => {
     section.innerHTML = "<ul> </ul>";
     const ul = section.querySelector('ul');
@@ -49,6 +66,7 @@ fetch('https://open.exchangerate-api.com/v6/latest')
 })
 .then(() => {
     const loadCurrencyPage = (index, prev) => {
+        section.scrollTop = 0;
         calcArea.classList.add('hide'), calcArea.classList.remove('active');
         currencyPage.classList.add('active'), currencyPage.classList.remove('hide');
         currencyPage.querySelector('h2').textContent = `Currency ${index}`;
@@ -97,7 +115,7 @@ fetch('https://open.exchangerate-api.com/v6/latest')
     });
     change.addEventListener('click', () => {
         previousUsed = [currency1, currency2];
-        input.value = "";
+        input.value = "1";
         loadCurrencyPage(1, previousUsed[0]);
     })
 });
@@ -121,7 +139,7 @@ document.querySelector('div.custom button').addEventListener('click', function()
 body.addEventListener('click', e => {
     if(e.target.classList.contains('currency-page') && section.classList.contains('check') && !e.target.classList.contains('check'))
     {
-        section.style.transform = 'translateY(150%) scaleY(0)';
+        section.style.transform = 'translateY(100%) scaleY(0)';
         // section.style.display = "none";
         section.style.opacity = "0";
         section.classList.add('check');

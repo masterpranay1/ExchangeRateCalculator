@@ -30,7 +30,7 @@
     box-shadow: var(--shadow);
     border-radius: 10px;
 
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 h2, h3
@@ -172,6 +172,7 @@ section
     border: 1px solid var(--clr-secondary);
 
     z-index: 1111;
+    padding-bottom: 25%;
 
 }
 section ul
