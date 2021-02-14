@@ -66,6 +66,7 @@ fetch('https://open.exchangerate-api.com/v6/latest')
 })
 .then(() => {
     const loadCurrencyPage = (index, prev) => {
+        swal.fire(`Enter currency ${index}`);
         section.scrollTop = 0;
         calcArea.classList.add('hide'), calcArea.classList.remove('active');
         currencyPage.classList.add('active'), currencyPage.classList.remove('hide');
